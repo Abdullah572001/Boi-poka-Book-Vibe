@@ -1,11 +1,24 @@
 import React from "react";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   const links = (
     <>
-      <li className="lg:mr-6 font-semibold cursor-pointer px-4 py-2 active:bg-blue-50 active:translate-y-1 transition active:shadow-2xl">Home</li>
-      <li className="lg:mr-6 font-semibold cursor-pointer px-4 py-2 active:bg-blue-50 active:translate-y-1 transition active:shadow-2xl">Listed Books</li>
-      <li className="font-semibold cursor-pointer px-4 py-2 active:bg-blue-50 active:translate-y-1 transition active:shadow-2xl">Pages to Read</li>
+      <NavLink to='/'>
+        <li className="lg:mr-6 font-semibold cursor-pointer px-4 py-2 active:bg-blue-50 active:translate-y-1 transition active:shadow-2xl">
+          Home
+        </li>
+      </NavLink>
+      <NavLink to='/listedBooks'>
+        <li className="lg:mr-6 font-semibold cursor-pointer px-4 py-2 active:bg-blue-50 active:translate-y-1 transition active:shadow-2xl">
+          Listed Books
+        </li>
+      </NavLink>
+      <NavLink>
+        <li className="font-semibold cursor-pointer px-4 py-2 active:bg-blue-50 active:translate-y-1 transition active:shadow-2xl">
+          Pages to Read
+        </li>
+      </NavLink>
     </>
   );
 
@@ -38,7 +51,7 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl">Boi Poka</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>

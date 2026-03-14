@@ -7,13 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:surge": "npm run build && cp dist/index.html dist/200.html && surge dist https://boi-poka-abdullah2001.surge.sh"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router": "^7.13.1",
+    "react-tabs": "^6.1.0",
+    "react-toastify": "^11.0.5",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
